@@ -1,0 +1,245 @@
+/* Import Classy Italic Font */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,500&display=swap');
+
+/* Global Styles */
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #d1c8f4;
+}
+
+/* Header */
+header {
+  background-color: #fcf0f0;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.0rem;
+  font-style: italic;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  box-sizing: border-box;
+  padding-top: 1.8vw;
+  padding-bottom: 1.8vw;
+  padding-left: 5vw;
+  padding-right: 5vw;
+  pointer-events: auto;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  color: #531a4a;
+}
+
+/* Header Title with Italic Flair */
+.header-title a {
+  font-size: 1.8rem;
+  font-style: italic;
+  font-weight: 500;
+  text-decoration: none;
+  color: #531a4a;
+  letter-spacing: 0.5px;
+  transition: color 0.3s ease;
+}
+
+.header-title a:hover {
+  color: #531a4a;
+}
+
+/* Navigation */
+nav {
+  display: flex;
+  gap: 1.5rem;
+}
+
+nav a {
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+  padding-left: 50px;
+  color: #531a4a;
+}
+
+nav a:hover {
+  color: #222;
+}
+
+/* LinkedIn Icon */
+nav a svg {
+  fill: #000;
+}
+
+/* Burger Menu */
+.burger {
+  display: none;
+  background: none;
+  border: none;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.burger span {
+  width: 25px;
+  height: 2px;
+  background: #000;
+}
+
+/* Hero Section (formerly .main-container) */
+.hero-section {
+    font-family: sans-serif;
+    padding: 4rem 5vw;
+    max-width: 1000px;
+    text-align: left;
+    border-radius: 1rem;
+    color: #531a4a;
+  }
+  
+  .hero-section h2 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    line-height: 1.3;
+  }
+  
+  .hero-section p {
+    font-size: 1.2rem;
+    line-height: 1.7;
+    margin-bottom: 2rem;
+  }
+  
+
+.intro-tagline {
+    text-align: center;
+    padding: 60px 0px ;
+    background-color: #531a4a;
+  }
+  
+  .intro-tagline h4 {
+    white-space: pre-wrap;
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin: 0;
+    color: white;
+  }
+  
+  .featuredproj {
+    padding-top: calc(22vmax / 10);
+    padding-bottom: calc(22vmax / 10);
+    background-color: #fff;
+  }
+  
+  /* Grid Container */
+  .featuredproj .featuredproj-grid {
+    display: grid;
+    position: relative;
+    grid-template-rows: repeat(2, minmax(24px, auto));
+    grid-template-columns:
+      minmax(6vw, 1fr)
+      repeat(8, minmax(0, calc((100% - (11px * (8 - 1))) / 8)))
+      minmax(6vw, 1fr);
+    gap: 11px;
+  }
+  
+  /* Grid Block */
+  .featuredproj .featuredproj-block {
+    grid-column: 2 / span 8;
+    grid-row: 1 / span 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 0;
+    text-align: center;
+  }
+  
+  /* Heading */
+  .featuredproj .featuredproj-block h2 {
+    font-size: 2.25rem;
+    white-space: pre-wrap;
+    margin: 0;
+  }
+  
+  /* Responsive: Increase grid density for desktop */
+  @media (min-width: 768px) {
+    .featuredproj .featuredproj-grid {
+      grid-template-columns:
+        minmax(4vw, 1fr)
+        repeat(24, minmax(0, calc((100% - (11px * 23)) / 24)))
+        minmax(4vw, 1fr);
+      grid-template-rows: repeat(2, minmax(calc(100vw * 0.0215), auto));
+    }
+  
+    .featuredproj .featuredproj-block {
+      grid-column: 8 / span 12;
+      grid-row: 1 / span 2;
+    }
+  }
+  
+  .flex-split {
+    display: flex;
+    background-color: #fafafa;
+    box-sizing: border-box;
+    height: 700px;
+  }
+  
+/* Default Layout: Left 33%, Right 66% */
+.left-33-right-66 .flex-left {
+  flex: 1;
+}
+
+.left-33-right-66 .flex-right {
+  flex: 2;
+}
+
+/* Swapped Layout: Left 66%, Right 33% */
+.left-66-right-33 .flex-left {
+  flex: 2;
+}
+
+.left-66-right-33 .flex-right {
+  flex: 1;
+}
+
+  
+  /* Shared styles */
+  .flex-left, .flex-right {
+    background-color: #f0e6ff;
+    padding: 20px;
+    color: white;
+  }
+  
+  /* Optional: distinct color to visually separate left/right */
+  .flex-left {
+    background-color: #e8e2f7;
+  }
+  
+  .flex-right {
+    background-color: #fff1f1;
+    
+  }
+
+  .flex-left img, .flex-right img {
+height: 100%;
+  width: 100%;
+  object-fit: fill;
+  }
+
+  .button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: #531a4a;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 999px;
+    font-weight: 600;
+    text-align: left;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border: solid;
+  }
+  
+ .button:hover {
+    background-color: #222;
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+  }

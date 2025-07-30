@@ -179,7 +179,7 @@ nav a svg {
     display: flex;
     background-color: #fafafa;
     box-sizing: border-box;
-    height: 700px;
+    height: 740px;
   }
   
 /* Default Layout: Left 33%, Right 66% */
@@ -221,7 +221,7 @@ nav a svg {
   .flex-left img, .flex-right img {
 height: 100%;
   width: 100%;
-  object-fit: fill;
+  object-fit: contain;
   }
 
   .button {
